@@ -1,0 +1,58 @@
+###################################################################################
+# ------------------------------ OTHER KEYBINDINGS ------------------------------ #
+###################################################################################
+
+set $browser        firefox
+set $emailclient    thunderbird
+
+# -- AUDIO FN KEYBINDS
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# -- BRIGHTNESS FN KEYBINDS
+# -- Install `xbacklight` package for these to work
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
+# -- START A TERMINAL
+bindsym $mod+Return workspace 1; exec --no-startup-id /usr/bin/alacritty
+
+# -- KILL FOCUSED WINDOW
+bindsym $mod+q kill
+
+# -- LAUNCH APP MENU
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher.sh
+
+# -- RELOAD THE CONFIGURATION FILE
+bindsym $mod+Shift+c reload
+
+# -- RESTART I3
+bindsym $mod+Shift+r restart
+
+# -- EXIT I3
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning \
+    -m 'Exit i3? This will end your X session.' \
+    -B 'Yes, exit i3' 'i3-msg exit'"
+
+# -- ENTER RESIZE MODE
+bindsym $mod+r mode "resize"
+
+# -- POWER OFF BUTTON DMENU
+bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
+
+# -- SCREENSHOT
+bindsym Print exec --no-startup-id flameshot full
+bindsym ctrl+Print exec --no-startup-id flameshot gui
+
+# -- TOGGLE CLIPBOARD
+bindsym $mod+z exec --no-startup-id rofi -modi "Clipboard:greenclip print" -show Clipboard -run-command '{cmd}' -theme ~/.config/rofi/selmenu.rasi
+
+# -- LOCK SCREEN WITH BETTERLOCKSCREEN
+bindsym $mod+x exec --no-startup-id betterlockscreen -l
+
+# -- APP KEYBINDS
+bindsym $mod+f exec --no-startup-id $browser &
+bindsym $mod+b exec --no-startup-id $emailclient &

@@ -1,0 +1,33 @@
+alias v='nvim'
+
+alias cp='cp -v'
+alias mkdir='mkdir -v'
+
+alias tree='exa --tree -L 2 -a'
+
+alias l='exa --icons --grid'
+alias ls='exa --icons'
+alias ll='exa --icons --long --grid --header --time-style=long-iso --git -a'
+
+alias cleancache='sudo pacman -Sc && yay -Sc'
+alias instpkg='sudo pacman -S $1'
+alias rmpkg='sudo pacman -Rns $1'
+alias uppkg='sudo pacman -Syu && yay -Syu'
+
+alias gst='git status'
+alias gdf='git diff'
+alias gcm='git commit -m'
+alias gad='git add'
+alias gph='git push'
+
+alias dotstat='git -C ~/.dotfiles status'
+
+alias win='ranger /win/Users/Datsudo/'
+alias courses='ranger /ar1/Courses'
+
+alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
+
+alias yt-dlp='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+
+alias upmirror='sudo reflector -c Indonesia,Singapore -a 6 --sort rate --download-timeout 60 --save /etc/pacman.d/mirrorlist'
+

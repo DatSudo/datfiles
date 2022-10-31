@@ -1,0 +1,20 @@
+#################################################################################
+#                                   i3 CONFIG                                   #
+#                                 -- datsudo --                                 #
+#################################################################################
+
+# -- SET MODIFIER
+set $mod Mod4
+
+# -- WINDOW TITLE FONT
+font pango:JetBrainsMono Nerd Font 8
+
+# -- MOUSE+$MOD TO DRAG FLOATING WINDOWS TO THEIR WANTED POSITION
+floating_modifier $mod
+
+# -- IMPORTS
+include ~/.config/i3/navigation
+include ~/.config/i3/startup
+include ~/.config/i3/winsettings
+include ~/.config/i3/keybinds
+include ~/.config/i3/gaps

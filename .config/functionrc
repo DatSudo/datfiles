@@ -1,0 +1,21 @@
+updot() {
+    dir=~/.dotfiles
+    date=$(date +%F)
+    time=$(date +%T)
+    git -C $dir add .
+    git -C $dir commit -m "dot backup: $date | $time"
+    git -C $dir push
+}
+
+acs(){
+    (( $+commands[python] )) || {
+        echo "[error] No python executable detected"
+        return
+    }
+    alias | python $HOME/.local/bin/acs.py $@
+}
+
+passin() {
+    pass insert $1
+    pass git push
+}

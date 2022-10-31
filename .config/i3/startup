@@ -1,0 +1,32 @@
+##################################################################################
+# ------------------------------ STARTUP COMMANDS ------------------------------ #
+##################################################################################
+
+# -- Restore wallpaper with nitrogen
+exec --no-startup-id nitrogen --restore & # -> RESTORE WALLPAPER
+
+# -- Launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# -- Start XDG autostart .desktop files using dex
+exec --no-startup-id dex --autostart --environment i3
+
+# -- Start xss-lock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# -- Start nm-applet system tray gui
+exec --no-startup-id nm-applet
+
+# -- Set gamma option
+exec --no-startup-id xrandr --output eDP1 --gamma 0.8:0.8:0.8
+
+# -- Set full RGB to monitor
+exec --no-startup-id xrandr --output HDMI-0 --set "Broadcast RGB" "Full"
+
+# -- Startup programs
+exec --no-startup-id xdman>/dev/null                # XDM
+exec --no-startup-id thunderbird &                  # Email client
+
+# -- Startup daemons
+exec --no-startup-id greenclip daemon>/dev/null     # Clipboard
+exec --no-startup-id picom &                        # Compositor

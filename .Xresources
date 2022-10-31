@@ -1,0 +1,9 @@
+Xft*dpi: 96
+Xft*antialias: true
+Xft*hinting: true
+Xft*hintstyle: hintfull
+Xft*rgba: rgb
+
+Sxiv.background: #1D2021
+Sxiv.foreground: #EBDBB2
+Sxiv.font: JetBrainsMono Nerd Font-10

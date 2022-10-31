@@ -1,0 +1,135 @@
+##################################################
+
+window:
+  padding:
+    x: 3
+    y: 3
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+  decorations: full
+
+  dynamic_title: true
+
+##################################################
+
+scrolling:
+  history: 100000
+  multiplier: 3
+
+##################################################
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+
+  size: 9
+
+##################################################
+
+draw_bold_text_with_bright_colors: true
+
+##################################################
+
+colors:
+  primary:
+    background: '#282828'
+    foreground: '#ebdbb2'
+    dim_foreground: '#928374'
+    bright_foreground: '#ebdbb2'
+
+  cursor:
+    text: '#1d2021'
+    cursor: '#ebdbb2'
+
+  vi_mode_cursor:
+    text: '#1d2021'
+    cursor: '#ebdbb2'
+
+  search:
+    matches:
+      foreground: '#1d2021'
+      background: '#98971a'
+
+    focused_match:
+      foreground: '#1d2021'
+      background: '#fabd2f'
+
+    footer_bar:
+      background: '#b16286'
+      foreground: '#1d2021'
+
+  hints:
+    start:
+      foreground: '#010816'
+      background: '#E99440'
+
+    end:
+      foreground: '#E99440'
+      background: '#010816'
+
+  line_indicator:
+    foreground: None
+    background: None
+
+  selection:
+    text: CellBackground
+    background: CellForeground
+
+  normal:
+    black:   '#1d2021'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+
+  transparent_background_colors: false
+
+##################################################
+
+cursor:
+  style:
+    blinking: On
+
+  blink_interval: 750
+
+  unfocused_hollow: true
+
+##################################################
+
+live_config_reload: true
+
+##################################################
+
+mouse:
+  hide_when_typing: true
+
+##################################################

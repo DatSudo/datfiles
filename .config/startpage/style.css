@@ -1,0 +1,84 @@
+html {
+      background-color: #282828;
+      align-items: center;
+      color: #ebdbb2;
+      display: flex;
+      font-family: 'JetBrainsMono Nerd Font', monospace;
+      font-size: 15px;
+      height: 100%;
+      justify-content: center;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      margin: 1em;
+      padding: 1em;
+    }
+
+    h1 {
+      font-size: 2em;
+      grid-column: 1 / -1;
+      margin: 0;
+      text-align: center;
+      color: #fabd2f;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #d79921;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 1em;
+      min-width: 24em;
+      padding: 1em 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    li {
+        color: #ebdbb2;
+    }
+
+    li:first-child {
+      font-weight: bold;
+      line-height: 2em;
+      color: #b16286;
+    }
+
+    img {
+      border: 2px solid #ebdbb2;
+      height: auto;
+      object-fit: cover;
+      object-position: 50% 100%;
+      width: 10em;
+    }
+
+input {
+  background-color: unset;
+  font: 16px 'JetBrainsMono Nerd Font', monospace;
+  color: #ebdbb2;
+  height: 100%;
+  width: 100%;
+  border-top-style: hidden;
+  border-bottom-style: soild;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-color: #b8bb26;
+  text-align: center;
+  margin-top: 50px;
+  outline: 0;
+  padding-bottom: 0.5em;
+}
