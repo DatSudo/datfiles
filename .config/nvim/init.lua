@@ -12,4 +12,3 @@ require("datsudo.bufferline")
 require("datsudo.lualine")
 require("datsudo.toggleterm")
 
-

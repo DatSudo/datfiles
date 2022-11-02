@@ -7,7 +7,7 @@
 set $mod Mod4
 
 # -- WINDOW TITLE FONT
-font pango:JetBrainsMono Nerd Font 8
+font pango:Terminus 8
 
 # -- MOUSE+$MOD TO DRAG FLOATING WINDOWS TO THEIR WANTED POSITION
 floating_modifier $mod

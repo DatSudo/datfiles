@@ -1,0 +1,240 @@
+#!/usr/bin/env bash
+
+# Copyright 01.01.2022 - 30.03.2022 Nicolai Brand
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
+
+HELP="
+-r,     prints total hours spent using tomatoshell and exits
+-t,     time for every session in minutes [default:25 minutes]
+-d,     delay between sessions in minutes [default:5 minutes]
+-n,     total sessions [default:3]
+-f,     figlet on
+-h,     shows this"
+
+# defaults
+TIME=25
+DELAY=5
+SESSIONS=3
+
+FIGLET=false
+ALARM="$HOME/.local/share/tomatoshell/alarm.wav"
+LOG="$HOME/.local/share/tomatoshell/tomatoshell_log.csv"
+AUDIO_PLAYER=3
+
+# colors
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[0;33m"
+CYAN="\033[0;34m"
+FIN="\033[0m"
+
+
+write_to_log() {
+    date_f=$(date +"%Y-%m-%d")
+    echo "$date_f,$SESSIONS,$TIME" >> "$LOG"
+}
+
+
+total_hours_used() {
+    printf "$YELLOW Total hours spent focused: $FIN"
+    awk -F ',' '{sum+=$2 * $3;} END{printf "%d", int(sum / 3600);}' $LOG
+    printf "h 🍅🤓\n"
+}
+ 
+
+# TODO: add option for xdg-open
+find_sound_system() {
+    if command -v mpv &> /dev/null
+    then
+        AUDIO_PLAYER=mpv
+
+    elif command -v paplay &> /dev/null
+    then
+        AUDIO_PLAYER=paplay
+
+    elif command -v aplay &> /dev/null
+    then
+        AUDIO_PLAYER=aplay
+   
+    else
+        AUDIO_PLAYER=0
+    fi
+}
+
+
+play_alarm() {
+    # when session is finished, start the alarm
+    printf "Press 's' to stop alarm"
+    [ $1 -eq -1 ] && echo " and start next session" || echo ""
+
+    process_name="tomatoshell_alarm"
+
+    while :
+    do
+        # play alarm sound indefinetely until the 's' key is pressed
+
+        if ! [ -e /proc/"$(pidof "$process_name")"/status ]
+        then
+            # janky :/
+            bash -c "exec -a $process_name $AUDIO_PLAYER $ALARM &>/dev/null" &
+        else
+            read -t 0.01 -r -s -n 1
+            [[ $REPLY == 's' ]] && pkill -f "$process_name" && break
+        fi
+    
+    done
+}
+
+
+display_countdown() {
+    start=$1
+
+    # yeahhhh I don̈́'t know what's going on here either
+    while [ "$start" -ge "$(date +%s)" ]
+    do
+        # due to the rendering of emoji's, the text needs to be offset to appear at the center.
+        # sleeping for one second between each print to stdout uses less cpu power, but will
+        # make the countdown have a discrepency of 1s which is negligable.
+        print_offset=10
+        $FIGLET && clear && printf "%*s\n" $(((${#msg}+$COLUMNS+$print_offset)/2)) "$msg" \
+        && echo -ne "$(date -u --date @$((start - $(date +%s))) +%M:%S)\r" | figlet -c -t ||
+        echo -ne "$CYAN\Uf061 $YELLOW $(date -u --date @$((start - $(date +%s))) +%M:%S)$FIN  🍅\r"
+
+        # be able to exit while during a countdown
+        read -t 1 -r -s -N 1 && [[ $REPLY == 'q' ]] && exit_p
+    done
+}
+
+
+countdown() {
+    time=$1
+    session_number=$2
+    msg="🍅Time left of session $session_number/$SESSIONS:🍅"
+    [ $session_number -eq -1 ] && msg="🍅Time left of break:🍅"
+
+    # date in seconds when countdown will end
+    start=$(($(date +%s) + $1)); 
+
+    display_countdown $start
+    clear
+
+    [ $session_number -ne -1 ] && notify-send -t 10000 -u "normal" "Session number $session_number finished"
+    
+    # message when session is finished
+    if $FIGLET
+    then
+        [ $session_number -ne -1 ] && figlet -c -t "Session $session_number/$SESSIONS finished" || figlet -c -t "Break finished"
+    else
+
+        [ $session_number -ne -1 ] && echo -e ""$GREEN"Session $session_number/$SESSIONS finished$FIN" || echo -e "$GREEN""Break finished$FIN"
+    fi
+
+    # turn on keypress so we can receive input from user as to when to stop the alarm
+    stty echo
+    play_alarm "$session_number"
+    stty -echo
+
+    return 0
+}
+
+
+exit_p() {
+    write_to_log
+
+    # turn on cursor again
+    tput cnorm
+    # turn on keyboard input again
+    stty echo
+
+    echo -e ""$RED"\nexiting$FIN"
+    exit $1
+}
+
+
+main() {
+    find_sound_system
+
+    # when SIGINT is received, exit
+    trap "exit_p" 2
+
+    # turn off keyboard input and cursor
+    stty -echo
+    tput civis
+
+    # convert time and delay to from minutes to seconds
+    # have to divide by 1 to always get integer result
+    TIME=$(echo "($TIME * 60)/1" | bc)
+    DELAY=$(echo "($DELAY * 60)/1" | bc)
+
+    for ((i = 1; i <= $SESSIONS; i++))
+    do
+        clear
+        echo "Time left of session $i/$SESSIONS:"
+        countdown $TIME $i
+
+        # don't want to have a break after last session
+        [ $i -ne $SESSIONS ] &&  clear && echo "Time left of break:" && countdown $DELAY -1
+    done
+}
+
+
+# argument handling
+while [[ $# -gt 0 ]]
+do
+    case $1 in
+        -r)
+            total_hours_used
+            exit 0
+            ;;
+        -t|--time)
+            TIME="$2"
+            shift && shift # past argument and value
+            ;;
+        -d|--delay)
+            DELAY="$2"
+            shift && shift
+            ;;
+        -n)
+            SESSIONS="$2"
+            shift && shift
+            ;;
+        -f)
+            if command -v figlet &> /dev/null
+            then
+                FIGLET=true
+            else
+                FIGLET=false
+                echo -e ""$RED"ERROR$FIN: argument '-f' was given, but figlet is not installed"
+                echo "Starting without figlet in 3 seconds"
+                # maybe add a keypress to start regardless
+                sleep 3
+            fi
+
+
+            shift
+            ;;
+        -h|--help)
+            echo -e "$HELP"
+            exit 0
+            ;;
+        *)
+            echo "Unknown option $1"
+            exit 1
+            ;;
+    esac
+done
+
+main
+exit_p 0

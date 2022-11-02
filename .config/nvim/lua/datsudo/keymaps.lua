@@ -63,6 +63,5 @@ keymap('n', '<leader>f', ":Telescope file_browser<CR>", opts)
 -- NVIMTREE --
 keymap('n', '<leader>n', ':NvimTreeToggle<CR>', opts)
 
-
 -- BUFFER --
 keymap('n', '<C-w>', ':Bdelete<CR>', opts)

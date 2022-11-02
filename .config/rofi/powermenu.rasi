@@ -14,7 +14,10 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import                          "colors.rasi"
-@import                          "fonts.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 9";
+}
 
 /*****----- Main Window -----*****/
 window {
@@ -33,7 +36,7 @@ window {
     padding:                     0px;
     border:                      1px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @background-alt;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -67,15 +70,15 @@ inputbar {
 
 textbox-prompt-colon {
     enabled:                     true;
-    expand:                      false;
+    expand:                      true;
     str:                         "datsudo@arch";
-    padding:                     8px 12px;
+    padding:                     4px 120px;
     border-radius:               0px;
-    background-color:            @urgent;
-    text-color:                  @background;
+    background-color:            @background;
+    text-color:                  @foreground;
 }
 prompt {
-    enabled:                     true;
+    enabled:                     false;
     padding:                     8px;
     border-radius:               0px;
     background-color:            @active;
@@ -86,7 +89,7 @@ prompt {
 message {
     enabled:                     true;
     margin:                      0px;
-    padding:                     8px;
+    padding:                     4px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
@@ -106,7 +109,7 @@ error-message {
     padding:                     8px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @background-alt;
     background-color:            @background;
     text-color:                  @foreground;
 }
@@ -140,7 +143,7 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     8px;
+    padding:                     4px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
@@ -156,6 +159,6 @@ element-text {
     horizontal-align:            0.0;
 }
 element selected.normal {
-    background-color:            var(selected);
+    background-color:            var(foreground);
     text-color:                  var(background);
 }

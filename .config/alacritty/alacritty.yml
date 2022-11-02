@@ -3,7 +3,7 @@
 window:
   padding:
     x: 3
-    y: 3
+    y: 0
 
   class:
     instance: Alacritty

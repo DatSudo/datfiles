@@ -10,7 +10,7 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser";
-    show-icons:                 false;
+    show-icons:                 true;
     display-drun:               "drun";
     display-run:                "run";
     display-filebrowser:        "files";
@@ -30,19 +30,19 @@ configuration {
     foreground-colour:           var(foreground);
     alternate-background:        var(background-alt);
     normal-background:           var(background);
-    normal-foreground:           var(foreground);
+    normal-foreground:           var(normal);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
-    selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(background);
+    selected-normal-background:  var(foreground);
+    selected-normal-foreground:  var(background-alt);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
     selected-active-foreground:  var(background);
     alternate-normal-background: var(background);
-    alternate-normal-foreground: var(foreground);
+    alternate-normal-foreground: var(normal);
     alternate-urgent-background: var(urgent);
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
@@ -56,7 +56,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       800px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -74,9 +74,9 @@ window {
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     6px;
     margin:                      0px;
-    padding:                     40px;
+    padding:                     10px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;

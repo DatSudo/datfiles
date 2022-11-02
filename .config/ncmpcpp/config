@@ -58,4 +58,4 @@ song_window_title_format = " {%A} - {%t}"
 
 startup_slave_screen=visualizer
 
-execute_on_song_change="notify-send "$(ncmpcpp -q --current-song="  {%t}")" "$(ncmpcpp -q --current-song="{%A} ﴁ")" -i /ar1/Pictures/Icons/Emotes/IUping50.png"
+execute_on_song_change="notify-send "$(ncmpcpp -q --current-song="  {%t}")" "$(ncmpcpp -q --current-song="⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n{%A} ﴁ")" -i /ar1/Pictures/Icons/Emotes/IUjam50.png"

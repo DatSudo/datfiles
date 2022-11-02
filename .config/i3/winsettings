@@ -27,7 +27,8 @@ for_window [class="^.*"] border pixel 1
 no_focus [window_role="pop-up"]
 
 # -- FLOATING WINDOW SETTINGS
-for_window [class="xdman-Main"] floating enable
+for_window [ class="xdman-Main" ] floating enable
+for_window [ class="Artha"      ] floating enable, resize set 500px 500px, move position center
 
 # -- MOVE APPS TO SPECIFIC WS
 for_window [ class="alacritty"     ] move to workspace 1

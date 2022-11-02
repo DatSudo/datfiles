@@ -52,6 +52,14 @@ return packer.startup(function(use)
     use "tpope/vim-surround" -- Surround selected with brackets, quotes, etc.
     use "akinsho/toggleterm.nvim" -- terminal inside neovim
     use "lukas-reineke/indent-blankline.nvim" -- indentation guide
+    use "lervag/vimtex" -- latex support
+    use {
+        "goolord/alpha-nvim", -- greeter
+        requires = { "kyazdani42/nvim-web-devicons" },
+        config = function ()
+            require"alpha".setup(require"alpha.themes.startify".config)
+        end
+    }
 
     -- Commenting
     use "numToStr/Comment.nvim" -- commenting tool
@@ -62,7 +70,7 @@ return packer.startup(function(use)
     use "folke/tokyonight.nvim"
     use "rafamadriz/neon"
     use "ellisonleao/gruvbox.nvim"
-    -- use "datsudo/gruvbox.nvim"
+    use "sainnhe/gruvbox-material"
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- completion plugin

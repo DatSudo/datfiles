@@ -14,7 +14,7 @@ PROMPTS="$ZDOTDIR/prompts"
 [ -f "$HOME/.config/functionrc" ]; source $HOME/.config/functionrc
 
 # -- Lines configured by zsh-newuser-install
-HISTFILE=~/.local/state/zsh/history/.histfile
+HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 

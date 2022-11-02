@@ -22,10 +22,19 @@ alias gph='git push'
 
 alias dotstat='git -C ~/.dotfiles status'
 
-alias win='ranger /win/Users/Datsudo/'
+alias win='ranger /ar1/Library'
 alias courses='ranger /ar1/Courses'
 
 alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
+
+alias pomo='tomatoshell'
+
+alias texhash='sudo texhash'
+alias tlmgr='tllocalmgr'
+
+alias pomos='pomo -f'
+
+alias py='python'
 
 alias yt-dlp='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
 

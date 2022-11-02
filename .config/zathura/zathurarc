@@ -6,8 +6,13 @@ map <Right> navigate next
 map J zoom out
 map K zoom in
 
+set font "JetBrainsMono Nerd Font Regular 9"
 set selection-clipboard clipboard
-set adjust-open "best-fit"
+set adjust-open "width"
+set window-title-basename true
+set window-title-page true
+set statusbar-basename true
+set guioptions n
 
 ####### COLOR SCHEME #######
 set notification-error-bg       "#1d2021" # bg
@@ -39,14 +44,14 @@ set statusbar-fg                "#ebdbb2" # fg
 set highlight-color             "#fabd2f" # bright:yellow
 set highlight-active-color      "#fe8019" # bright:orange
 
-set default-bg                  "#282828" # bg
+set default-bg                  "#1d2021" # bg
 set default-fg                  "#ebdbb2" # fg
 set render-loading              true
-set render-loading-bg           "#282828" # bg
+set render-loading-bg           "#1d2021" # bg
 set render-loading-fg           "#ebdbb2" # fg
 
 # Recolor book content's color
-set recolor-lightcolor          "#282828" # bg
+set recolor-lightcolor          "#1d2021" # bg
 set recolor-darkcolor           "#ebdbb2" # fg
 set recolor                     "true"
 

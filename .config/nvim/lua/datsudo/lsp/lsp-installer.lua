@@ -22,6 +22,11 @@ lsp_installer.on_server_ready(function(server)
 	 	opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 	end
 
+	if server.name == "ltex" then
+	 	local ltex_opts = require("datsudo.lsp.settings.ltex")
+	 	opts = vim.tbl_deep_extend("force", ltex_opts, opts)
+	end
+
 	-- This setup() function is exactly the same as lspconfig's setup function.
 	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 	server:setup(opts)

@@ -1,5 +1,4 @@
 local op = vim.opt
-local wo = vim.wo
 local cm = vim.cmd
 
 -- :help options
@@ -31,7 +30,7 @@ local options = {
     cursorline = true,
     number = true,
     relativenumber = false,
-    wrap = false,
+    wrap = true,
     scrolloff = 8,
     sidescrolloff = 8,
     mouse = 'a',
@@ -45,7 +44,7 @@ op.shortmess:append 'c'
 
 cm [[
     set background=dark
-    set iskeyword+=-
+    set title
     let g:netrw_banner=0
 ]]
 

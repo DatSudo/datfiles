@@ -4,21 +4,23 @@
 
 set $browser        firefox
 set $emailclient    thunderbird
+set $fileexplorer   thunar
+set $dictionary     artha
 
 # -- AUDIO FN KEYBINDS
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # -- BRIGHTNESS FN KEYBINDS
 # -- Install `xbacklight` package for these to work
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 # -- START A TERMINAL
-bindsym $mod+Return workspace 1; exec --no-startup-id /usr/bin/alacritty
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # -- KILL FOCUSED WINDOW
 bindsym $mod+q kill
@@ -44,7 +46,7 @@ bindsym $mod+r mode "resize"
 bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
 
 # -- SCREENSHOT
-bindsym Print exec --no-startup-id flameshot full
+bindsym Print      exec --no-startup-id flameshot full
 bindsym ctrl+Print exec --no-startup-id flameshot gui
 
 # -- TOGGLE CLIPBOARD
@@ -54,5 +56,7 @@ bindsym $mod+z exec --no-startup-id rofi -modi "Clipboard:greenclip print" -show
 bindsym $mod+x exec --no-startup-id betterlockscreen -l
 
 # -- APP KEYBINDS
-bindsym $mod+f exec --no-startup-id $browser &
-bindsym $mod+b exec --no-startup-id $emailclient &
+bindsym $mod+f       exec --no-startup-id $browser &
+bindsym $mod+b       exec --no-startup-id $emailclient &
+bindsym $mod+t       exec --no-startup-id $fileexplorer &
+bindsym $mod+Shift+w exec --no-startup-id $dictionary &

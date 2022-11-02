@@ -19,3 +19,4 @@ passin() {
     pass insert $1
     pass git push
 }
+

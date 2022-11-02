@@ -3,7 +3,7 @@
 ##################################################################################
 
 # -- Restore wallpaper with nitrogen
-exec --no-startup-id nitrogen --restore & # -> RESTORE WALLPAPER
+exec --no-startup-id nitrogen --restore &
 
 # -- Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -26,6 +26,7 @@ exec --no-startup-id xrandr --output HDMI-0 --set "Broadcast RGB" "Full"
 # -- Startup programs
 exec --no-startup-id xdman>/dev/null                # XDM
 exec --no-startup-id thunderbird &                  # Email client
+exec --no-startup-id artha &                        # Dictionary
 
 # -- Startup daemons
 exec --no-startup-id greenclip daemon>/dev/null     # Clipboard
