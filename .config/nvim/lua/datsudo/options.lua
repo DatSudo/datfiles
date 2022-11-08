@@ -46,6 +46,10 @@ cm [[
     set background=dark
     set title
     let g:netrw_banner=0
+    let g:vimtex_quickfix_ignore_filters = [
+        \ 'Underfull',
+        \ 'Overfull',
+        \]
 ]]
 
 

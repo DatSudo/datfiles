@@ -2,8 +2,8 @@
 
 window:
   padding:
-    x: 3
-    y: 0
+    x: 15
+    y: 15
 
   class:
     instance: Alacritty
@@ -23,19 +23,19 @@ scrolling:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Bold Italic
 
   size: 9

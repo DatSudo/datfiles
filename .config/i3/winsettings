@@ -1,6 +1,6 @@
-#####################################################################################
-# -------------------------------- WINDOW SETTINGS -------------------------------- #
-#####################################################################################
+#################################################################
+# ---------------------- WINDOW SETTINGS ---------------------- #
+#################################################################
 
 # -- COLORS
 set $black   #1d2021
@@ -18,7 +18,7 @@ set $white   #a89984
 client.focused              $black2     $black2     $white      $black2
 client.focused_inactive     $black      $black      $white      $black
 client.unfocused            $black      $black      $magenta    $black
-client.urgent               $red        $red        $white      $red
+client.urgent               $red        $red        $black      $red
 
 # -- BORDER THICKNESS
 for_window [class="^.*"] border pixel 1
@@ -27,11 +27,13 @@ for_window [class="^.*"] border pixel 1
 no_focus [window_role="pop-up"]
 
 # -- FLOATING WINDOW SETTINGS
-for_window [ class="xdman-Main" ] floating enable
-for_window [ class="Artha"      ] floating enable, resize set 500px 500px, move position center
+for_window [ class="xdman-Main"  ] floating enable
+for_window [ class="Artha"       ] floating enable, resize set 500px 500px, move position center
+for_window [ title="Open Folder" ] floating enable, resize set 600px 600px, move position center
+for_window [ title="Open File"   ] floating enable, resize set 800px 600px, move position center
 
 # -- MOVE APPS TO SPECIFIC WS
-for_window [ class="alacritty"     ] move to workspace 1
-for_window [ class="firefox"       ] move to workspace 2
-for_window [ class="discord"       ] move to workspace 3
-for_window [ class="Spotify"       ] move to workspace 4
+for_window [ class="alacritty" ] move to workspace 1
+for_window [ class="firefox"   ] move to workspace 2
+for_window [ class="discord"   ] move to workspace 3
+for_window [ class="Spotify"   ] move to workspace 4

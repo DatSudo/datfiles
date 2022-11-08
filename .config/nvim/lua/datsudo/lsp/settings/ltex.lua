@@ -12,7 +12,7 @@ return {
                 ["es"]    = { "MORFOLOGIK_RULE_ES"    },
                 ["it"]    = { "MORFOLOGIK_RULE_IT_IT" },
                 ["de"]    = { "MORFOLOGIK_RULE_DE_DE" },
-            }
+            },
         }
     }
 }
