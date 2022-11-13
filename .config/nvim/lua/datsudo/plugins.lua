@@ -53,6 +53,7 @@ return packer.startup(function(use)
     use "akinsho/toggleterm.nvim" -- terminal inside neovim
     use "lukas-reineke/indent-blankline.nvim" -- indentation guide
     use "lervag/vimtex" -- latex support
+    use "natecraddock/workspaces.nvim" -- manages workspaces
     use {
         "goolord/alpha-nvim", -- greeter
         requires = { "kyazdani42/nvim-web-devicons" },

@@ -1,5 +1,7 @@
 local op = vim.opt
 local cm = vim.cmd
+local ag = vim.api.nvim_create_augroup
+local au = vim.api.nvim_create_autocmd
 
 -- :help options
 local options = {
@@ -29,7 +31,7 @@ local options = {
     shiftwidth = 4,
     cursorline = true,
     number = true,
-    relativenumber = false,
+    relativenumber = true,
     wrap = true,
     scrolloff = 8,
     sidescrolloff = 8,
@@ -42,6 +44,15 @@ end
 op.fillchars:append { eob = ' ' }
 op.shortmess:append 'c'
 
+---Highlight yanked text
+au('TextYankPost', {
+  group = ag('yank_highlight', {}),
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank { higroup='IncSearch', timeout=500 }
+  end,
+})
+
 cm [[
     set background=dark
     set title
@@ -49,6 +60,7 @@ cm [[
     let g:vimtex_quickfix_ignore_filters = [
         \ 'Underfull',
         \ 'Overfull',
+        \ 'beamerthememetropolis',
         \]
 ]]
 

@@ -1,5 +1,5 @@
 ###############################################################
-# -------------------- OTHER KEYBINDINGS -------------------- #
+# ----------------------- KEYBINDINGS ----------------------- #
 ###############################################################
 
 set $browser        firefox
@@ -55,8 +55,14 @@ bindsym $mod+z exec --no-startup-id rofi -modi "Clipboard:greenclip print" -show
 # -- LOCK SCREEN WITH BETTERLOCKSCREEN
 bindsym $mod+x exec --no-startup-id betterlockscreen -l
 
+# -- LOCK KEY AND MOUSE INPUT
+bindsym $mod+Shift+F9 exec --no-startup-id xtrlock
+
 # -- APP KEYBINDS
 bindsym $mod+f       exec --no-startup-id $browser &
 bindsym $mod+b       exec --no-startup-id $emailclient &
 bindsym $mod+t       exec --no-startup-id $fileexplorer &
 bindsym $mod+Shift+w exec --no-startup-id $dictionary &
+
+# -- LAUNCH BTOP
+bindsym $mod+F11 exec --no-startup-id btop

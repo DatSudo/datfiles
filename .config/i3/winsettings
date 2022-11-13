@@ -27,10 +27,13 @@ for_window [class="^.*"] border pixel 1
 no_focus [window_role="pop-up"]
 
 # -- FLOATING WINDOW SETTINGS
-for_window [ class="xdman-Main"  ] floating enable
-for_window [ class="Artha"       ] floating enable, resize set 500px 500px, move position center
-for_window [ title="Open Folder" ] floating enable, resize set 600px 600px, move position center
-for_window [ title="Open File"   ] floating enable, resize set 800px 600px, move position center
+for_window [ class="xdman-Main"      ] floating enable
+for_window [ class="Tk"              ] floating enable
+for_window [ class="Artha"           ] floating enable, resize set 500px 500px, move position center
+for_window [ title="Open Folder"     ] floating enable, resize set 600px 600px, move position center
+for_window [ title="Open File"       ] floating enable, resize set 800px 600px, move position center
+for_window [ title="Save pdf file"   ] floating enable, resize set 800px 600px, move position center
+for_window [ class="thunar"          ] resize set 800px 600px
 
 # -- MOVE APPS TO SPECIFIC WS
 for_window [ class="alacritty" ] move to workspace 1

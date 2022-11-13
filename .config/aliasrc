@@ -36,6 +36,8 @@ alias pomos='pomo -f'
 
 alias py='python'
 
+alias 2day='v $(date +%F).md'
+
 alias yt-dlp='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
 
 alias upmirror='sudo reflector -c Indonesia,Singapore -a 6 --sort rate --download-timeout 60 --save /etc/pacman.d/mirrorlist'

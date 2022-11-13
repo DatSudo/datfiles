@@ -3,8 +3,6 @@ if not status_ok then
   return
 end
 
-local actions = require "telescope.actions"
-
 -- telescope.load_extension('media_files')
 -- telescope.load_extension('telescope_project')
 
@@ -44,10 +42,14 @@ telescope.setup {
         theme = "dropdown",
         previewer = false,
         hidden = true
+    },
+    workspaces = {
+        keep_insert = false
     }
   }
 }
 
 require("telescope").load_extension "fzy_native"
 require("telescope").load_extension "file_browser"
+require("telescope").load_extension "workspaces"
 

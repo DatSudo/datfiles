@@ -59,9 +59,14 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- TELESCOPE --
 keymap('n', '<leader>f', ":Telescope file_browser<CR>", opts)
+keymap('n', '<leader>u', ":Telescope workspaces<CR>", opts)
 
 -- NVIMTREE --
 keymap('n', '<leader>n', ':NvimTreeToggle<CR>', opts)
 
 -- BUFFER --
 keymap('n', '<C-w>', ':Bdelete<CR>', opts)
+
+-- Launch Alpha
+keymap('n', '<F12>', ':Alpha<CR>', opts)
+

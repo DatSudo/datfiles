@@ -11,4 +11,5 @@ require('datsudo.options')
 require("datsudo.bufferline")
 require("datsudo.lualine")
 require("datsudo.toggleterm")
+require("datsudo.workspaces")
 
