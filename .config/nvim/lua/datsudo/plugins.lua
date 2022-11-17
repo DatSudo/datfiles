@@ -50,54 +50,74 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "tpope/vim-surround" -- Surround selected with brackets, quotes, etc.
-    use "akinsho/toggleterm.nvim" -- terminal inside neovim
-    use "lukas-reineke/indent-blankline.nvim" -- indentation guide
-    use "lervag/vimtex" -- latex support
-    use "natecraddock/workspaces.nvim" -- manages workspaces
-    use {
-        "goolord/alpha-nvim", -- greeter
+    use "akinsho/toggleterm.nvim" -- Terminal inside neovim
+    use "lukas-reineke/indent-blankline.nvim" -- Indentation guide
+    use "lervag/vimtex" -- LaTeX support
+    use "natecraddock/workspaces.nvim" -- Manages workspaces
+
+    -- Run code
+    use {"CRAG666/code_runner.nvim",
+        requires = "nvim-lua/plenary.nvim"}
+
+    -- Note taking
+    use {"vimwiki/vimwiki",
+        config = function()
+            vim.g.vimwiki_list = {
+            {
+                path = "/home/datsudo/Documents/Notes/wiki",
+                syntax = "markdown",
+                ext = ".md"
+            }
+        }
+        end}
+
+    -- Greeter
+    use {"goolord/alpha-nvim",
         requires = { "kyazdani42/nvim-web-devicons" },
         config = function ()
             require"alpha".setup(require"alpha.themes.startify".config)
-        end
-    }
+        end}
+
+    -- Markdown preview
+    use {"iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" }}
 
     -- Commenting
-    use "numToStr/Comment.nvim" -- commenting tool
+    use "numToStr/Comment.nvim" -- Commenting tool
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
     -- Colorschemes
-    use "marko-cerovac/material.nvim"
-    use "folke/tokyonight.nvim"
-    use "rafamadriz/neon"
     use "ellisonleao/gruvbox.nvim"
-    use "sainnhe/gruvbox-material"
 
     -- Completion
-    use "hrsh7th/nvim-cmp" -- completion plugin
-    use "hrsh7th/cmp-buffer" -- buffer completion
-    use "hrsh7th/cmp-path" -- path completion
-    use "hrsh7th/cmp-cmdline" -- command completion
-    use "hrsh7th/cmp-nvim-lsp" -- completion for LSP
-    use "hrsh7th/cmp-nvim-lua" -- completion for LSP
-    use "saadparwaiz1/cmp_luasnip" -- snippet completion
+    use "hrsh7th/nvim-cmp" -- Completion plugin
+    use "hrsh7th/cmp-buffer" -- Buffer completion
+    use "hrsh7th/cmp-path" -- Path completion
+    use "hrsh7th/cmp-cmdline" -- Command completion
+    use "hrsh7th/cmp-nvim-lsp" -- Completion for LSP
+    use "hrsh7th/cmp-nvim-lua" -- Completion for LSP
+    use "saadparwaiz1/cmp_luasnip" -- Snippet completion
 
     -- Buffers
     use "akinsho/bufferline.nvim"
     use "moll/vim-bbye"
 
     -- Snippets
-    use "L3MON4D3/LuaSnip" -- snippet engine
-    use "rafamadriz/friendly-snippets" -- snippets collection
+    use "L3MON4D3/LuaSnip" -- Snippet engine
+    use "rafamadriz/friendly-snippets" -- Snippets collection
 
     -- LSP
-    use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/nvim-lsp-installer" -- language server installer
+    use "neovim/nvim-lspconfig" -- Enable LSP
+    use "williamboman/nvim-lsp-installer"
 
     -- Telescope
-    use "nvim-telescope/telescope.nvim" -- fuzzy search tool
-    use "nvim-telescope/telescope-file-browser.nvim"
-    use "nvim-telescope/telescope-fzy-native.nvim"
+    use "nvim-telescope/telescope.nvim" -- Fuzzy search tool
+    use "nvim-telescope/telescope-file-browser.nvim" -- File browser
+    use "nvim-telescope/telescope-fzy-native.nvim" -- Fzf integration
 
     -- Devicons
     use "kyazdani42/nvim-web-devicons"

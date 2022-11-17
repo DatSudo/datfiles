@@ -12,4 +12,5 @@ require("datsudo.bufferline")
 require("datsudo.lualine")
 require("datsudo.toggleterm")
 require("datsudo.workspaces")
+require("datsudo.code-runner")
 

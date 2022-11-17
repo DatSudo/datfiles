@@ -3,8 +3,8 @@
 #################################################################
 
 # -- COLORS
-set $black   #1d2021
-set $black2  #3c3836
+set $black   #282828
+set $black2  #404040
 set $red     #cc241d
 set $green   #98971a
 set $yellow  #d79921
@@ -12,6 +12,7 @@ set $blue    #458588
 set $magenta #b16286
 set $cyan    #689d6a
 set $white   #a89984
+set $white2  #ebdbb2
 
 # -- DECOR CONFIG
 # class                     border      backg       text        indicator
@@ -21,7 +22,7 @@ client.unfocused            $black      $black      $magenta    $black
 client.urgent               $red        $red        $black      $red
 
 # -- BORDER THICKNESS
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 
 # -- DISABLE FOCUS FOR POP-UPS
 no_focus [window_role="pop-up"]
@@ -33,10 +34,10 @@ for_window [ class="Artha"           ] floating enable, resize set 500px 500px, 
 for_window [ title="Open Folder"     ] floating enable, resize set 600px 600px, move position center
 for_window [ title="Open File"       ] floating enable, resize set 800px 600px, move position center
 for_window [ title="Save pdf file"   ] floating enable, resize set 800px 600px, move position center
+for_window [ title="Add bookmark"    ] floating enable, resize set 800px 600px, move position center
 for_window [ class="thunar"          ] resize set 800px 600px
 
 # -- MOVE APPS TO SPECIFIC WS
 for_window [ class="alacritty" ] move to workspace 1
-for_window [ class="firefox"   ] move to workspace 2
 for_window [ class="discord"   ] move to workspace 3
 for_window [ class="Spotify"   ] move to workspace 4

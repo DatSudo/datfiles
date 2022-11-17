@@ -3,8 +3,11 @@ return {
 
         python = {
             analysis = {
-                typeCheckingMode = "off"
-            }
+                typeCheckingMode = "strict",
+            },
+        reportUnusedVariable = "none",
+        reportUnusedFunction = "none",
+        reportUnusedClass = "none"
         }
 	},
 }

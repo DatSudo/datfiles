@@ -65,4 +65,4 @@ bindsym $mod+t       exec --no-startup-id $fileexplorer &
 bindsym $mod+Shift+w exec --no-startup-id $dictionary &
 
 # -- LAUNCH BTOP
-bindsym $mod+F11 exec --no-startup-id btop
+bindsym $mod+F11 exec --no-startup-id alacritty -e btop

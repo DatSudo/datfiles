@@ -13,6 +13,8 @@ return {
                 ["it"]    = { "MORFOLOGIK_RULE_IT_IT" },
                 ["de"]    = { "MORFOLOGIK_RULE_DE_DE" },
             },
+            logLevel = "severe",
+            diagnosticSeverity = "hint"
         }
     }
 }

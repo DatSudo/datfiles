@@ -16,7 +16,7 @@ configuration {
 @import                          "colors.rasi"
 
 * {
-    font: "JetBrainsMono Nerd Font 9";
+    font: "Terminus 9";
 }
 
 /*****----- Main Window -----*****/

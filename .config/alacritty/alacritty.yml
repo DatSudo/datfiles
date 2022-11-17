@@ -2,8 +2,8 @@
 
 window:
   padding:
-    x: 15
-    y: 15
+    x: 20
+    y: 20
 
   class:
     instance: Alacritty
@@ -12,6 +12,7 @@ window:
   decorations: full
 
   dynamic_title: true
+  dynamic_padding: true
 
 ##################################################
 
@@ -38,7 +39,7 @@ font:
     family: monospace
     style: Bold Italic
 
-  size: 9
+  size: 10
 
 ##################################################
 

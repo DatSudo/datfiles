@@ -80,7 +80,7 @@ nvim_tree.setup {
                 git = true,
             },
             glyphs = {
-                default = "📄",
+                default = "",
                 symlink = "",
                 git = {
                     unstaged = "",
@@ -92,8 +92,8 @@ nvim_tree.setup {
                     ignored = "◌",
                 },
                 folder = {
-                    default = "📁",
-                    open = "📂",
+                    default = "",
+                    open = "",
                     empty = "",
                     empty_open = "",
                     symlink = "",

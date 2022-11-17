@@ -70,3 +70,14 @@ keymap('n', '<C-w>', ':Bdelete<CR>', opts)
 -- Launch Alpha
 keymap('n', '<F12>', ':Alpha<CR>', opts)
 
+-- Markdown preview
+keymap('n', '<F7>', ':MarkdownPreviewToggle<CR>', opts)
+
+-- Split vertical
+keymap('n', '<leader>vv', ':vertical split<CR>', opts)
+-- Split horizontal
+keymap('n', '<leader>hh', ':horizontal split<CR>', opts)
+
+-- Run file
+keymap('n', '<F5>', ':RunFile<CR>', opts)
+

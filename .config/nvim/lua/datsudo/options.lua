@@ -35,6 +35,7 @@ local options = {
     wrap = true,
     scrolloff = 8,
     sidescrolloff = 8,
+    linebreak = true,
     mouse = 'a',
 }
 for k, v in pairs(options) do
