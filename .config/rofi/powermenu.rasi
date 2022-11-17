@@ -16,7 +16,7 @@ configuration {
 @import                          "colors.rasi"
 
 * {
-    font: "Terminus 9";
+    font: "BlexMono Nerd Font Medium 9";
 }
 
 /*****----- Main Window -----*****/
