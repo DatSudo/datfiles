@@ -7,7 +7,7 @@
 set $mod Mod4
 
 # -- WINDOW TITLE FONT
-font pango:Terminus 0
+font pango:Cozette 8
 
 # -- MOUSE+$MOD TO DRAG FLOATING WINDOWS TO THEIR WANTED POSITION
 floating_modifier $mod
