@@ -24,3 +24,13 @@ actenv() {
     envdir="$1"
     source $envdir/bin/activate
 }
+
+updotmod() {
+    zshdir=~/.config/zsh/plugins
+    mods=("fzf-tab" "powerlevel10k" "zsh-autosuggestions" "zsh-syntax-highlighting")
+    for mod in ${mods}; do
+        git -C $zshdir/$mod pull
+    done
+    git -C ~/.config/cascade pull
+}
+
