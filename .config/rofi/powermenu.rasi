@@ -16,7 +16,7 @@ configuration {
 @import                          "colors.rasi"
 
 * {
-    font: "BlexMono Nerd Font Medium 9";
+    font: "Cozette 8";
 }
 
 /*****----- Main Window -----*****/
