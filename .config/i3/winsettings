@@ -38,6 +38,7 @@ for_window [ title="Add bookmark"    ] floating enable, resize set 800px 600px, 
 for_window [ class="thunar"          ] resize set 800px 600px
 
 # -- MOVE APPS TO SPECIFIC WS
-for_window [ class="alacritty" ] move to workspace 1
-for_window [ class="discord"   ] move to workspace 3
-for_window [ class="Spotify"   ] move to workspace 4
+for_window [ class="alacritty"     ] move to workspace 1
+for_window [ class="discord"       ] move to workspace 3
+for_window [ class="Spotify"       ] move to workspace 4
+for_window [ class="qbittorrent"   ] move to workspace 9

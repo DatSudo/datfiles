@@ -1,4 +1,5 @@
 alias v='nvim'
+alias scr='v ~/Documents/Notes/wiki/Scratch.md'
 
 alias cp='cp -v'
 alias mkdir='mkdir -v'

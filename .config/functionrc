@@ -20,3 +20,7 @@ passin() {
     pass git push
 }
 
+actenv() {
+    envdir="$1"
+    source $envdir/bin/activate
+}
