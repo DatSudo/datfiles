@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "BlexMono Nerd Font Medium 10";
+    font: "JetBrainsMono Nerd Font Medium 10";
 }
