@@ -26,7 +26,7 @@ exec --no-startup-id xrandr --output HDMI-0 --set "Broadcast RGB" "Full"
 # -- Startup programs
 exec --no-startup-id xdman>/dev/null                # XDM
 exec --no-startup-id thunderbird &                  # Email client
-exec --no-startup-id artha &                        # Dictionary
+exec --no-startup-id stardict>/dev/null             # Dictionary
 
 # -- Startup daemons
 exec --no-startup-id greenclip daemon>/dev/null     # Clipboard

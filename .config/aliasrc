@@ -37,7 +37,9 @@ alias pomos='pomo -f'
 
 alias py='python'
 
-alias 2day='v $(date +%F).md'
+alias 2day='v ~/Documents/Notes/wiki/diary/$(date +%F).md'
+
+alias mup=ncmpcpp-ueberzug
 
 alias startor='sudo systemctl start tor'
 alias stoptor='sudo systemctl stop tor'
