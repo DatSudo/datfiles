@@ -55,6 +55,20 @@ return packer.startup(function(use)
     use "lervag/vimtex" -- LaTeX support
     use "natecraddock/workspaces.nvim" -- Manages workspaces
 
+    -- Auto tag HTML etc.
+    use {"windwp/nvim-ts-autotag",
+        config = function ()
+            require("nvim-ts-autotag").setup {}
+        end
+    }
+
+    -- Auto pairs
+    use {"windwp/nvim-autopairs",
+        config = function ()
+            require("nvim-autopairs").setup {}
+        end
+    }
+
     -- Run code
     use {"CRAG666/code_runner.nvim",
         requires = "nvim-lua/plenary.nvim"}
@@ -63,20 +77,19 @@ return packer.startup(function(use)
     use {"vimwiki/vimwiki",
         config = function()
             vim.g.vimwiki_list = {
-            {
+                {
                 path = "/home/datsudo/Documents/Notes/wiki",
                 syntax = "markdown",
                 ext = ".md"
+                }
             }
-        }
+            vim.g.vimwiki_global_ext = 0
         end}
 
     -- Greeter
     use {"goolord/alpha-nvim",
-        requires = { "kyazdani42/nvim-web-devicons" },
-        config = function ()
-            require"alpha".setup(require"alpha.themes.startify".config)
-        end}
+        requires = { "kyazdani42/nvim-web-devicons" }
+    }
 
     -- Markdown preview
     use {"iamcco/markdown-preview.nvim",

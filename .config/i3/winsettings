@@ -35,6 +35,7 @@ for_window [ title="Open Folder"     ] floating enable, resize set 600px 600px, 
 for_window [ title="Open File"       ] floating enable, resize set 800px 600px, move position center
 for_window [ title="Save pdf file"   ] floating enable, resize set 800px 600px, move position center
 for_window [ title="Add bookmark"    ] floating enable, resize set 800px 600px, move position center
+for_window [ class="SpeedCrunch"     ] floating enable, resize set 400px 400px, move position right
 for_window [ class="thunar"          ] resize set 800px 600px
 
 # -- MOVE APPS TO SPECIFIC WS

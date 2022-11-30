@@ -58,6 +58,9 @@ bindsym $mod+x exec --no-startup-id betterlockscreen -l
 # -- LOCK KEY AND MOUSE INPUT
 bindsym $mod+Shift+F9 exec --no-startup-id xtrlock
 
+# -- TOGGLE TOUCHPAD
+bindsym $mod+F6 exec --no-startup-id ~/.local/bin/toggle_touchpad
+
 # -- APP KEYBINDS
 bindsym $mod+f       exec --no-startup-id $browser &
 bindsym $mod+b       exec --no-startup-id $emailclient &

@@ -46,7 +46,7 @@ visualizer_look = "  "           # First we make the visualizer invisible
 startup_screen = "visualizer"      # Next we make the left pane open on the empty visualizer
 startup_slave_screen = "playlist"  # The right pane is the usual playlist view
 startup_slave_screen_focus = "yes" # We focus the right pane on ncmpcpp startup
-locked_screen_width_part = "47"    # We make the empty pane occupy 30% width, just like the cover art
+locked_screen_width_part = "49"    # We make the empty pane occupy 30% width, just like the cover art
 
 execute_on_song_change="~/.local/bin/ncmpcpp_cover_art.sh"
 

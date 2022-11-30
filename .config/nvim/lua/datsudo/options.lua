@@ -62,6 +62,7 @@ cm [[
         \ 'Underfull',
         \ 'Overfull',
         \ 'beamerthememetropolis',
+        \ 'inputenc Warning',
         \]
 ]]
 

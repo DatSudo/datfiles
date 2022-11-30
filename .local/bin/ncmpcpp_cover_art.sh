@@ -4,8 +4,8 @@
 # SETTINGS
 music_library="/ar1/Music"
 fallback_image="$HOME/Pictures/fallbacks/fallback.png"
-padding_top=4
-padding_bottom=4
+padding_top=2
+padding_bottom=2
 padding_right=0
 max_width=50
 reserved_playlist_cols=20
@@ -27,6 +27,7 @@ main() {
     find_cover_image        >/dev/null 2>&1
     display_cover_image     2>/dev/null
     detect_window_resizes   >/dev/null 2>&1
+    notify-send "$(ncmpcpp -q --current-song="  {%t}")" "$(ncmpcpp -q --current-song="⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n{%A} ﴁ")" -i /ar1/Pictures/Icons/Emotes/IUjam50.png
 }
 
 # ==== Main functions =========================================================

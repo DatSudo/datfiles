@@ -33,6 +33,8 @@ zstyle :compinstall filename '/home/datsudo/.config/zsh/.zshrc'
 
 autoload -Uz compinit
 compinit
+
+autoload -U zmv
 # -- End of lines added by compinstall
 
 # -- Add plugins

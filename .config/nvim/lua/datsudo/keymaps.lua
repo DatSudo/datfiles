@@ -30,6 +30,9 @@ keymap('n', 'j', 'gj', opts)
 keymap('n', 'k', 'gk', opts)
 keymap('n', '<Down>', 'gj', opts)
 keymap('n', '<Up>', 'gk', opts)
+-- Remap start, end line keys
+keymap('n', '0', 'g0', opts)
+keymap('n', '$', 'g$', opts)
 -- Quick quit, save file
 keymap('n', '<leader>q', ':q<CR>', opts)
 keymap('n', '<leader>w', ':w<CR>', opts)

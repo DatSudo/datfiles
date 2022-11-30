@@ -13,4 +13,5 @@ require("datsudo.lualine")
 require("datsudo.toggleterm")
 require("datsudo.workspaces")
 require("datsudo.code-runner")
+require("datsudo.alpha-nvim")
 

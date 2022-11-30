@@ -1,10 +1,29 @@
-updot() {
-    dir=~/.dotfiles
-    date=$(date +%F)
-    time=$(date +%T)
-    git -C $dir add .
-    git -C $dir commit -m "dot backup: $date | $time"
-    git -C $dir push
+upgit() {
+    reps=("dot" "javascr" "pyscr")
+    r="$1"
+    usage="\033[1mUSAGE\033[0m\n\tupgit [WORKSPACE]\n\n\033[1mLIST OF WORKSPACES\033[0m\n\t- [dot] dotfiles\n\t- [javascr] java sample files\n\t- [pyscr] python scripts\n"
+
+    case $r in
+        ${reps[1]})
+            dir=~/.dotfiles
+            ;;
+        ${reps[2]})
+            dir=~/Documents/Dev/javascr
+            ;;
+        ${reps[3]})
+            dir=~/Documents/Dev/pyscr
+            ;;
+        *)
+            echo $usage
+            ;;
+    esac
+    if [[ " ${reps[*]} " =~ " $r " ]]; then
+        date=$(date +%F)
+        time=$(date +%T)
+        git -C $dir add .
+        git -C $dir commit -m "backup: $date | $time"
+        git -C $dir push
+    fi
 }
 
 acs(){
@@ -34,3 +53,16 @@ updotmod() {
     git -C ~/.config/cascade pull
 }
 
+notes() {
+    f="$(find ~/Documents/Notes/wiki | fzf --reverse --border=sharp --height=50%)"
+    [[ ! (-z $f) ]] && v $f
+}
+
+nn() {
+    if [[ ! (-z "$1") ]] then
+        echo "* [[$1]]" >> ~/Documents/Notes/wiki/index.md
+        v ~/Documents/Notes/wiki/"$1".md
+    else
+        echo "\033[1mUSAGE\033[0m\n\tnn \"[FILENAME]\""
+    fi
+}

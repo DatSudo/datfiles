@@ -1,5 +1,6 @@
 alias v='nvim'
 alias scr='v ~/Documents/Notes/wiki/Scratch.md'
+alias task='v ~/Documents/Notes/wiki/Tasks.md'
 
 alias cp='cp -v'
 alias mkdir='mkdir -v'
@@ -10,10 +11,10 @@ alias l='exa --icons --grid'
 alias ls='exa --icons'
 alias ll='exa --icons --long --grid --header --time-style=long-iso --git -a'
 
-alias cleancache='sudo pacman -Sc && yay -Sc'
+alias cleancache='sudo pacman -Sc --noconfirm && yay -Sc --noconfirm'
 alias instpkg='sudo pacman -S $1'
 alias rmpkg='sudo pacman -Rns $1'
-alias uppkg='sudo pacman -Syu && yay -Syu'
+alias uppkg='sudo pacman -Syu && yay -Syu && yay -S neovim-nightly-bin'
 
 alias gst='git status'
 alias gdf='git diff'
