@@ -104,7 +104,7 @@ return packer.startup(function(use)
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
     -- Colorschemes
-    use "ellisonleao/gruvbox.nvim"
+    use "DatSudo/gruvbox.nvim"
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- Completion plugin
