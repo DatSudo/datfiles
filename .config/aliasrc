@@ -1,6 +1,8 @@
 alias v='nvim'
 alias scr='v ~/Documents/Notes/wiki/Scratch.md'
 alias task='v ~/Documents/Notes/wiki/Tasks.md'
+alias lab='cd ~/Documents/Dev/lab'
+alias sicp='cd ~/Documents/Dev/sicp-exercises'
 
 alias cp='cp -v'
 alias mkdir='mkdir -v'

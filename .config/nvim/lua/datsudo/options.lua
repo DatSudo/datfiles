@@ -64,6 +64,7 @@ cm [[
         \ 'beamerthememetropolis',
         \ 'inputenc Warning',
         \]
+    autocmd FileType vimwiki :IndentBlanklineDisable
 ]]
 
 

@@ -54,6 +54,7 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim" -- Indentation guide
     use "lervag/vimtex" -- LaTeX support
     use "natecraddock/workspaces.nvim" -- Manages workspaces
+    use "jbyuki/venn.nvim" -- Draw diagrams
 
     -- Auto tag HTML etc.
     use {"windwp/nvim-ts-autotag",

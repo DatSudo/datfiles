@@ -61,7 +61,7 @@ notes() {
 nn() {
     if [[ ! (-z "$1") ]] then
         echo "* [[$1]]" >> ~/Documents/Notes/wiki/index.md
-        v ~/Documents/Notes/wiki/"$1".md
+        echo "# $1\n\n" >> ~/Documents/Notes/wiki/"$1".md && v ~/Documents/Notes/wiki/"$1".md
     else
         echo "\033[1mUSAGE\033[0m\n\tnn \"[FILENAME]\""
     fi

@@ -5,7 +5,7 @@
 music_library="/ar1/Music"
 fallback_image="$HOME/Pictures/fallbacks/fallback.png"
 padding_top=2
-padding_bottom=2
+padding_bottom=3
 padding_right=0
 max_width=50
 reserved_playlist_cols=20
@@ -14,7 +14,7 @@ force_square="false"
 square_alignment="top"
 
 left_aligned="true"
-padding_left=0
+padding_left=2
 
 # Only set this if the geometries are wrong or ncmpcpp shouts at you to do it.
 # Visually select/highlight a character on your terminal, zoom in an image 

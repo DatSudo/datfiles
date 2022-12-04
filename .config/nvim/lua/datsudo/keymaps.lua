@@ -84,3 +84,6 @@ keymap('n', '<leader>hh', ':horizontal split<CR>', opts)
 -- Run file
 keymap('n', '<F5>', ':RunFile<CR>', opts)
 
+-- Create box
+keymap('v', '<F11>', ":VBox<CR>", opts)
+
