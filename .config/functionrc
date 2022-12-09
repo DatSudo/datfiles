@@ -66,3 +66,21 @@ nn() {
         echo "\033[1mUSAGE\033[0m\n\tnn \"[FILENAME]\""
     fi
 }
+
+nd() {
+    f="$1"
+    n=${f:0:1}
+    dir=~/Documents/Dev/lab/advent_of_code/day${n}
+    if [[ !(-d $dir) ]] then
+        mkdir -p $dir
+    fi
+
+    echo -e \
+        "#!/usr/bin/python3\n
+import sys\n
+_IN = \"samp\"
+cmds = [s.split(' ') for s in [x.strip() for x in open(sys.argv[1] if len(sys.argv) > 1 else _IN).read().strip().split('\\\n')]]
+" >> $dir/day${f}.py
+    chmod +x $dir/day${f}.py
+    v $dir/day${f}.py
+}

@@ -37,6 +37,7 @@ local options = {
     sidescrolloff = 8,
     linebreak = true,
     mouse = 'a',
+    signcolumn = "auto"
 }
 for k, v in pairs(options) do
     op[k] = v
@@ -64,7 +65,6 @@ cm [[
         \ 'beamerthememetropolis',
         \ 'inputenc Warning',
         \]
-    autocmd FileType vimwiki :IndentBlanklineDisable
 ]]
 
 

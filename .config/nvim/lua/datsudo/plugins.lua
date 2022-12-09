@@ -49,9 +49,9 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
-    use "tpope/vim-surround" -- Surround selected with brackets, quotes, etc.
+    --[[ use "tpope/vim-surround" -- Surround selected with brackets, quotes, etc. ]]
     use "akinsho/toggleterm.nvim" -- Terminal inside neovim
-    use "lukas-reineke/indent-blankline.nvim" -- Indentation guide
+    --[[ use "lukas-reineke/indent-blankline.nvim" -- Indentation guide ]]
     use "lervag/vimtex" -- LaTeX support
     use "natecraddock/workspaces.nvim" -- Manages workspaces
     use "jbyuki/venn.nvim" -- Draw diagrams
@@ -64,11 +64,11 @@ return packer.startup(function(use)
     }
 
     -- Auto pairs
-    use {"windwp/nvim-autopairs",
-        config = function ()
-            require("nvim-autopairs").setup {}
-        end
-    }
+    --[[ use {"windwp/nvim-autopairs", ]]
+    --[[     config = function () ]]
+    --[[         require("nvim-autopairs").setup {} ]]
+    --[[     end ]]
+    --[[ } ]]
 
     -- Run code
     use {"CRAG666/code_runner.nvim",
@@ -106,6 +106,7 @@ return packer.startup(function(use)
 
     -- Colorschemes
     use "DatSudo/gruvbox.nvim"
+    use "Shatur/neovim-ayu"
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- Completion plugin
@@ -122,7 +123,7 @@ return packer.startup(function(use)
 
     -- Snippets
     use "L3MON4D3/LuaSnip" -- Snippet engine
-    use "rafamadriz/friendly-snippets" -- Snippets collection
+    --[[ use "rafamadriz/friendly-snippets" -- Snippets collection ]]
 
     -- LSP
     use "neovim/nvim-lspconfig" -- Enable LSP

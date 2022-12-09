@@ -16,6 +16,6 @@ configs.setup {
         enable = true,
         enable_autocmd = false
     },
-    indent = { enable = false, disable = { "yaml", "latex" } },
+    indent = { enable = false, disable = { "yaml", "latex", "python" } },
 }
 

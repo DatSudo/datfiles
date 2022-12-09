@@ -11,3 +11,5 @@ export PASSWORD_STORE_DIR="$HOME/.local/share/pass"
 
 # Default wget config file
 export WGETRC="$HOME/.config/wgetrc"
+
+export JUPYTERLAB_DIR="$HOME/.local/share/jupyter/lab"

@@ -3,6 +3,7 @@ alias scr='v ~/Documents/Notes/wiki/Scratch.md'
 alias task='v ~/Documents/Notes/wiki/Tasks.md'
 alias lab='cd ~/Documents/Dev/lab'
 alias sicp='cd ~/Documents/Dev/sicp-exercises'
+alias aoc='cd ~/Documents/Dev/lab/advent_of_code'
 
 alias cp='cp -v'
 alias mkdir='mkdir -v'
@@ -39,6 +40,7 @@ alias tlmgr='tllocalmgr'
 alias pomos='pomo -f'
 
 alias py='python'
+alias bpy='bpython'
 
 alias 2day='v ~/Documents/Notes/wiki/diary/$(date +%F).md'
 
