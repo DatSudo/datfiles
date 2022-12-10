@@ -106,7 +106,7 @@ return packer.startup(function(use)
 
     -- Colorschemes
     use "DatSudo/gruvbox.nvim"
-    use "Shatur/neovim-ayu"
+    use "DatSudo/neovim-ayu"
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- Completion plugin

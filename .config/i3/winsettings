@@ -3,15 +3,15 @@
 #################################################################
 
 # -- COLORS
-set $black   #282828
-set $black2  #404040
-set $red     #cc241d
-set $green   #98971a
-set $yellow  #d79921
-set $blue    #458588
-set $magenta #b16286
-set $cyan    #689d6a
-set $white   #a89984
+set $black   #0b0e14
+set $black2  #3b354c
+set $red     #ff3333
+set $green   #b8cc52
+set $yellow  #e6c446
+set $blue    #36a3d9
+set $magenta #f07078
+set $cyan    #95e5cb
+set $white   #ffffff
 set $white2  #ebdbb2
 
 # -- DECOR CONFIG

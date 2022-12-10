@@ -1,4 +1,4 @@
-local colorscheme = "gruvbox"
+local colorscheme = "ayu-dark"
 
 ---@diagnostic disable-next-line: param-type-mismatch
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

@@ -69,7 +69,7 @@ nn() {
 
 nd() {
     f="$1"
-    n=${f:0:1}
+    n=${f:0:2}
     dir=~/Documents/Dev/lab/advent_of_code/day${n}
     if [[ !(-d $dir) ]] then
         mkdir -p $dir

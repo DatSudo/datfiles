@@ -1,7 +1,7 @@
 html {
-      background-color: #282828;
+      background-color: #0b0e14;
       align-items: center;
-      color: #ebdbb2;
+      color: #e5e1cf;
       display: flex;
       font-family: 'JetBrainsMono Nerd Font', monospace;
       font-size: 15px;
@@ -21,7 +21,7 @@ html {
       grid-column: 1 / -1;
       margin: 0;
       text-align: center;
-      color: #fabd2f;
+      color: #e6c446;
     }
 
     a {
