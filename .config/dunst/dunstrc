@@ -5,7 +5,7 @@
     horizontal_padding = 8
     text_icon_padding = 10
     frame_width = 1
-    frame_color = "#ebdbb2"
+    frame_color = "#e5e1cf"
     format = "<b>%s</b>\n%b"
     font = JetBrainsMono Nerd Font 10
     max_icon_size = 50
@@ -13,21 +13,21 @@
     icon_path = /home/datsudo/Pictures/icons/:/usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [urgency_low]
-    background = "#1d2021"
-    foreground = "#ebdbb2"
+    background = "#0b0e14"
+    foreground = "#e5e1cf"
     timeout = 5
     default_icon = /ar1/Pictures/Icons/Emotes/IUping50.png 
 
 [urgency_normal]
-    background = "#1d2021"
-    foreground = "#ebdbb2"
+    background = "#0b0e14"
+    foreground = "#e5e1cf"
     timeout = 5
     default_icon = /ar1/Pictures/Icons/Emotes/IUping50.png 
 
 [urgency_critical]
-    background = "#cc241d"
-    foreground = "#1d2021"
-    frame_color = "#ebdbb2"
+    background = "#ff3333"
+    foreground = "#0b0e14"
+    frame_color = "#e5e1cf"
     timeout = 0
     default_icon = /ar1/Pictures/Icons/Emotes/IUpingangry50.png
 
