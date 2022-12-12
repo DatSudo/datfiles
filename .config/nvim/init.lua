@@ -1,6 +1,5 @@
 require('datsudo.keymaps')
 require('datsudo.plugins')
-require('datsudo.colorscheme')
 require('datsudo.cmp')
 require('datsudo.lsp')
 require("datsudo.telescope")
@@ -14,4 +13,5 @@ require("datsudo.toggleterm")
 require("datsudo.workspaces")
 require("datsudo.code-runner")
 require("datsudo.alpha-nvim")
+require('datsudo.colorscheme')
 

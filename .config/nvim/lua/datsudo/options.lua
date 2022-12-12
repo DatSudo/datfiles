@@ -37,7 +37,7 @@ local options = {
     sidescrolloff = 8,
     linebreak = true,
     mouse = 'a',
-    signcolumn = "auto"
+    signcolumn = "auto",
 }
 for k, v in pairs(options) do
     op[k] = v
