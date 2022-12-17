@@ -5,7 +5,7 @@ lyrics_directory = ~/.config/ncmpcpp/.lyrics
 system_encoding = "utf-8"
 
 playlist_display_mode = "classic"
-song_list_format = "$1> $2%A$8 - $8%t $R $3%l  "
+song_list_format = "$1  $2%A$8 - $8%t $R $3%l  "
 # song_list_format = "$6{%a »$4 %t$/r$R}|{%f}"
 
 message_delay_time = "2"

@@ -5,7 +5,7 @@
 music_library="/ar1/Music"
 fallback_image="$HOME/Pictures/fallbacks/fallback.png"
 padding_top=2
-padding_bottom=3
+padding_bottom=2
 padding_right=0
 max_width=50
 reserved_playlist_cols=20

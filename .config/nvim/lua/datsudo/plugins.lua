@@ -64,11 +64,11 @@ return packer.startup(function(use)
     }
 
     -- Auto pairs
-    --[[ use {"windwp/nvim-autopairs", ]]
-    --[[     config = function () ]]
-    --[[         require("nvim-autopairs").setup {} ]]
-    --[[     end ]]
-    --[[ } ]]
+    use {"windwp/nvim-autopairs",
+        config = function ()
+            require("nvim-autopairs").setup {}
+        end
+    }
 
     -- Run code
     use {"CRAG666/code_runner.nvim",
