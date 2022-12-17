@@ -1,10 +1,6 @@
 # Datfiles
 
-My Arch config files.
-
-Available color schemes (see other branch):
-- gruvbox
-- ayu-dark
+My ayu-dark Arch config files.
 
 ## Installation
 
