@@ -8,7 +8,7 @@ Available color schemes (see other branch):
 <details>
 <summary><b>Gruv</b></summary>
 
-<img src=".images/gruv">
+<img src="https://github.com/DatSudo/datfiles/blob/main/.images/gruv.png">
 </img>
 </div>
 
@@ -17,7 +17,7 @@ Available color schemes (see other branch):
 <details>
 <summary><b>Ayu-dark</b></summary>
 
-<img src=".images/ayu-dark">
+<img src="https://github.com/DatSudo/datfiles/blob/main/.images/ayu-dark.png">
 </img>
 </div>
 
