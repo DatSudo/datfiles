@@ -1,6 +1,11 @@
 # Datfiles
 
-My gruvbox Arch config files.
+Gruvbox Arch config files.
+
+<div align="center">
+    <img src="https://github.com/DatSudo/datfiles/blob/main/.images/gruv.png">
+</div>
+
 
 ## Installation
 
