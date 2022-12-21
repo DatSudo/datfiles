@@ -1,8 +1,5 @@
 # Datfiles
 
-<<<<<<< HEAD
-My ayu-dark Arch config files.
-=======
 My Arch config files.
 
 Available color schemes (see other branches):
@@ -25,7 +22,6 @@ Available color schemes (see other branches):
 </div>
 
 ---
->>>>>>> main
 
 ## Installation
 
