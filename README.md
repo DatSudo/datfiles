@@ -1,24 +1,9 @@
 # Datfiles
 
-My Arch config files.
+Ayu-dark Arch config files.
 
-Available color schemes (see other branches):
-
-<div>
-<details>
-<summary><b>Gruv</b></summary>
-
-<img src="https://github.com/DatSudo/datfiles/blob/main/.images/gruv.png">
-</img>
-</div>
-
-
-<div>
-<details>
-<summary><b>Ayu-dark</b></summary>
-
-<img src="https://github.com/DatSudo/datfiles/blob/main/.images/ayu-dark.png">
-</img>
+<div align=center>
+    <img src="https://github.com/DatSudo/datfiles/blob/main/.images/ayu-dark.png">
 </div>
 
 ---
