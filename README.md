@@ -2,7 +2,7 @@
 
 My Arch config files.
 
-Available color schemes (see other branch):
+Available color schemes (see other branches):
 
 <div>
 <details>
