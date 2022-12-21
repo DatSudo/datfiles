@@ -3,8 +3,25 @@
 My Arch config files.
 
 Available color schemes (see other branch):
-- gruvbox
-- ayu-dark
+
+<div>
+<details>
+<summary><b>Gruv</b></summary>
+
+<img src=".images/gruv">
+</img>
+</div>
+
+
+<div>
+<details>
+<summary><b>Ayu-dark</b></summary>
+
+<img src=".images/ayu-dark">
+</img>
+</div>
+
+---
 
 ## Installation
 

@@ -2,8 +2,8 @@
 # --------------------- i3 GAPS CONFIG --------------------- #
 ##############################################################
 
-gaps top 0
-gaps left 0
-gaps right 0
-gaps bottom 0
-gaps inner 0
+gaps top 20
+gaps left 20
+gaps right 20
+gaps bottom 20
+gaps inner 20

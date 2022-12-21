@@ -30,3 +30,4 @@ _darcs
 \__pycache__
 ^/aur.lst
 ^/nat.lst
+\.images
