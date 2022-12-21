@@ -31,3 +31,4 @@ stow .config/nvim
 stow .Xresources
 ```
 
+
