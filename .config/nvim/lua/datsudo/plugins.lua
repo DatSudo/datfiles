@@ -107,9 +107,7 @@ return packer.startup(function(use)
     -- Colorschemes
     use "DatSudo/gruvbox.nvim"
     use "DatSudo/neovim-ayu"
-    use "NLKNguyen/papercolor-theme"
-    use "rakr/vim-one"
-    use "cormacrelf/vim-colors-github"
+    use "rebelot/kanagawa.nvim"
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- Completion plugin
